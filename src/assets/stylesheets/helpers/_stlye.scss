@@ -1,0 +1,263 @@
+$main-color:  #5f6d89; //#6d7993;
+$main-lighter:  #d1dddb; //#cdceda;
+$main-darker:  #374157; //#566075;
+$second-color:  #7f8fb0; //#96858f;
+
+//全域//
+*{
+    font-family: 'Noto Serif TC', serif;
+}
+.main-bg{
+    background-color: #F2F0ED; //#e2e1e1;
+}
+
+
+//nav//
+.nav-cart{
+    position: relative;
+    .badge{
+        position: absolute;
+        top: 0px;
+        right: 2px;
+    }
+    .badge-text{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+
+//header//
+.bg-cover{
+    background-size: cover;
+    background-position: center center;
+}
+.header-box-section{
+    position: relative;
+    margin-top: -100px;
+    z-index: 1;
+}
+
+.banner-img-1{
+    background-image: url(~@/assets/images/banner1.jpg);
+    height: 500px;
+}
+.banner-img-2{
+    background-image: url(~@/assets/images/banner2.jpg);
+    height: 500px;
+}
+.banner-img-3{
+    background-image: url(~@/assets/images/banner3.jpg);
+    height: 500px;
+}
+
+//index//
+.header-box-wrap {
+    position: relative;
+    height: 270px;
+
+    .header-box-text{
+        letter-spacing: 10px;
+        writing-mode: vertical-rl;
+    }
+    .header-box-cover{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $second-color;
+        opacity: 0.9;
+        z-index: -1;
+        transition: all .7s;
+    }
+    .header-box-img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -2;
+    }
+    &:hover{
+        .header-box-cover{
+            background-color: $main-darker;
+            opacity: 0.7;
+        }
+        .header-box-text{
+            color: white;
+        }
+    }
+    .header-box-1{
+        background-image: url(~@/assets/images/header-bed.jpg);
+    }
+    .header-box-2{
+        background-image: url(~@/assets/images/header-cabinet.jpg);
+    }
+    .header-box-3{
+        background-image: url(~@/assets/images/header-curtain.jpg);
+    }
+}
+
+.header-box-border{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+
+//why//
+.section-why-img{
+    min-height: 200px;
+    @include media-breakpoint-down(md) {
+        margin: 5px 0px ;
+    }
+}
+
+.section-over{
+    @include media-breakpoint-up(md){
+        margin-top: -40px;
+        margin-bottom: -30px;
+    }
+}
+
+.vertical-content{
+    max-height: 420px;
+    @include media-breakpoint-up(md) {
+        line-height: 2.5;
+    }
+}
+
+.vertical-content-text{
+    line-height: 1.5;
+    @include media-breakpoint-up(md) {
+        writing-mode: vertical-rl;
+        line-height: 2;
+    }
+    &.verticla-title{
+        letter-spacing: 8px;
+    }
+}
+
+.why-img-1{
+    background-image: url(~@/assets/images/why-img1.jpg);
+}
+
+.why-img-2{
+    background-image: url(~@/assets/images/why-img2.jpg);
+}
+
+//PRODUCTCARD//
+.item-card{
+    position: relative;
+}
+
+.item-image{
+    height: 340px;
+}
+.item-name, .item-price{
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+.item-body{
+    border: 1px solid $main-lighter;
+    height: 120px;
+}
+.item-name{
+    border-right: 1px solid $main-lighter;
+}
+
+.item-label{
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    padding: 15px 10px;
+    background-color: $main-darker;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+
+//訂閱//
+.sub-size{
+    height: 60px;
+    border: 0;
+}
+
+.sbu-text{
+    letter-spacing: 3px;
+}
+
+
+//FOOTER//
+.list-unstlyed{
+    list-style: none;
+}
+
+
+//product//
+.product-header-text{
+    white-space: nowrap;
+    letter-spacing: 8px;
+    writing-mode: vertical-rl;
+    line-height: 1.5;
+    top:0;
+    right: 0;
+    &.text-bg{
+        background-color: rgba(255, 254, 254, 0.399);
+    }
+}
+
+
+//login//
+.form-withicon{
+    position: relative;
+    padding-left: 50px;
+    .form-icon{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    .material-icon{
+        position: absolute;
+        top: 18px;
+        left: 25px;
+    }
+}
+
+.ic-logo{
+    max-width: 110px;
+}
+
+
+//cart// & //checkout//
+.cart-row-detail .cart-image, .card-summaryimg .cart-image{
+    min-width: 110px;
+    height: 100px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.flex-fill{
+    flex: 1 1 auto;
+}
+
+.cart-quantity-btn-add, .cart-quantity-qty, .cart-quantity-btn-remove{
+    width: 30px;
+    height: 30px;
+}
+
+
+//checkout//
+.form-control-lg{
+    height: 50px;
+}
+
+//success//
+.banner-img-4{
+    background-image: url(~@/assets/images/banner4.jpg);
+    height: 500px;
+}
